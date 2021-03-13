@@ -1,0 +1,65 @@
+# Premier League Trivia
+## _Question & Answer Game_
+
+Premier League Trivia is a _question an answer_ game that will have a maximum of 20 questions. The game will be based on trivia related to Premier League football. The goal of the game is to get through all 20 questions with the highest score possible. Each question will get progressively harder. And right answers will give the player points. Each wrong answer will take points away.  
+
+There will be a variety of types of questions, e.g. fill-in-the-blank, multiple choice, etc. The player will simply use the mouse to interact with elements on the screen, e.g. answering questions. There will be a button on each question "give up" that will allow the player to move on to the next question quickly and taking fewer points lost. This will discourage players from guessing.
+
+There will be a timer and the player will have x-amount of time to finish the game. 
+
+The game will end when the player either runs out of time or finishes all 20 questions. 
+
+## Extra Features _Nice to Have_
+
+- Ask player for name to start
+- Save player's high score.
+
+## MVP
+### Technique
+HTML5, CSS and Vanilla __Javascript__ (DOM Manipulation)
+
+- Will use one page for the entire game
+- 22 different "views"
+- Start/Spash Screen, 20 questions, End Game screen
+- Will use DOM manipulation to allow player to move through each screen without loading new page. (In other words, there will not be a 22 page website)
+
+### Sources
+- HTML page
+- CSS styling page
+- Javascript Game file
+- Javascript Main file
+- Javascript Splash file
+- Javascript End Game file
+
+### Game States
+Splash screen
+- Title
+- Image
+- Start button
+
+Question Screen
+- Question and Answer(s), input field(s).
+
+End Game
+- Title
+- Image
+- Total Score
+
+### Game
+- Question and Answer
+- Points for correct answer
+- Minus points for wrong answer
+- Fewer minus points for "give up" answer
+- Player interacts with game with mouse to choose multiple choice answers and/or keys to type in answers where necessary
+- Timer counts down, check timer, if timer expires, game over.
+- Check player answered all 20 questions within time alotted, game over.
+
+### Data structure
+__main.js__
+createStartScreen(id);
+createGameScreen(id);
+createGameOverScreen(id);
+
+destroyStartScreen();
+destroyGameScreen();
+destroyGameOverScreen();
