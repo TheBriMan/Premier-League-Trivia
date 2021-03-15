@@ -3,3 +3,17 @@ body{
 	font-family: sans-serif;
 	color: #333;
 }
+
+#submit {
+    display: none;
+}
+
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}

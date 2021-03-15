@@ -1,3 +1,4 @@
+
 function buildGame(){
     //variable to store HTML output
     const output = [];
@@ -18,7 +19,7 @@ function buildGame(){
                         <input type="radio" name="question${questionNumber}" value="${letter}">
                         ${letter} :
                         ${currentQuestion.answers[letter]}
-                    </label`
+                    </label>`
                 );
             }
             
@@ -55,13 +56,13 @@ function showEndGameResults(){
             numberCorrectAnswers++;
 
             //Color correct answer selection green - May take this out
-            answerContainers[questionNumber].style.color = 'green';
+            //answerContainers[questionNumber].style.color = 'green';
 
             //PLAY A CHEERING NOISE HERE
             //ALSO POINTS ACCUMULATION HERE FOR RIGHT ANSWER
         } else {
             //If answer wrong, color answers red - May take this out
-            answerContainers[questionNumber].style.color = 'red';
+            //answerContainers[questionNumber].style.color = 'red';
 
             //PLAY BOOING/JEARING NOISE HERE
             //ALSO POINTS DEDUCTION HERE FOR WRONG ANSWER
@@ -72,6 +73,8 @@ function showEndGameResults(){
 }
 
 //variables
+const splashScreen = document.getElementById('splash')
+const startGame = document.getElementById('start-game')
 const gameContainer = document.getElementById('game');
 const endGameResultsContainer = document.getElementById('end-game-results');
 const submitButton = document.getElementById('submit');
@@ -108,8 +111,29 @@ const gameQuestions = [
     },
 ]
 
-//display game
-buildGame();
+//display game on slick "Start Game" button
+
+startGame.onclick = function() {
+    startGame.style.display = "none";
+    submitButton.style.display = "block";
+    return buildGame();
+  };
 
 //on submit, show end game results
-submitButton.addEventListener('click', showEndGameResults);
+//submitButton.addEventListener('click', showEndGameResults);
+submitButton.onclick = function() {
+    const answers = gameContainer.querySelectorAll(".answers");
+    const questions = gameContainer.querySelectorAll(".question");
+    //console.log(answersArr);
+    //console.log(questionsArr);
+    for (var i=0;i<answers.length;i+=1){
+        answers[i].style.display = "none";
+      }
+    //answers.style.display = "none";
+    for (var i=0;i<questions.length;i+=1){
+        questions[i].style.display = "none";
+    }
+    //questions.style.display = "none";
+    submitButton.style.display = "none";
+    return showEndGameResults();
+  };
