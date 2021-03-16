@@ -1,4 +1,3 @@
-
 function buildGame(){
     //variable to store HTML output
     const output = [];
@@ -111,10 +110,13 @@ const gameQuestions = [
     },
 ]
 
+splashScreen.innerHTML = `<img src="images/Premier_League_Logo.svg" />`;
+
 //display game on slick "Start Game" button
 
 startGame.onclick = function() {
     startGame.style.display = "none";
+    splashScreen.style.display = "none";
     submitButton.style.display = "block";
     return buildGame();
   };
