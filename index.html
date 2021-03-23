@@ -3,18 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Premier League Trivia</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" sizes="16x16" type="image/ico">
 </head>
 <body>
-    <h1>Premier League Trivia</h1>
     <div class = "container">
-        <div id="splash"></div>
-        <button id="start-game">Start Game</button>
-        <div id="game"></div>
-        <button id="submit">Submit Answer</button>
-        <div id="end-game-results"></div>
+        <header>
+            <h1>Premier League Trivia</h1>
+        </header>
+        <div id="timer"></div>
+        <div class = "game-container">
+            <div id = "splash-screen">
+                <button class="btn" id="start-game">Start Game!</button>
+            </div>
+            <div id = "q1" style = "display: none;">
+                <!--<h3>Question 1</h3>
+                <div class="answer-grid">
+                    <button class="btn btnq1 correct">Answer 1</button>
+                    <button class="btn btnq1 wrong">Answer 2</button>
+                    <button class="btn btnq1 wrong">Answer 3</button>
+                    <button class="btn btnq1 wrong">Answer 4</button>
+                </div>--> 
+            </div>
+            <div id = "q2" style = "display: none;">
+                <h3>Question 2</h3>
+                <div class="answer-grid">
+                    <button class="btn btnq2 correct">Answer 1</button>
+                    <button class="btn btnq2 wrong">Answer 2</button>
+                    <button class="btn btnq2 wrong">Answer 3</button>
+                    <button class="btn btnq2 wrong">Answer 4</button> 
+                </div>
+            </div>
+            <div id = "q3" style = "display: none;">
+                <h3>Question 3</h3>
+                <div class="answer-grid">
+                    <button class="btn btnq3 correct">Answer 1</button>
+                    <button class="btn btnq3 wrong">Answer 2</button>
+                    <button class="btn btnq3 wrong">Answer 3</button>
+                    <button class="btn btnq3 wrong">Answer 4</button>
+                </div> 
+            </div>
+            <div id = "q4" style = "display: none;">
+                <h3>Question 4</h3>
+                <div class="answer-grid">
+                    <button class="btn btnq4 correct">Answer 1</button>
+                    <button class="btn btnq4 wrong">Answer 2</button>
+                    <button class="btn btnq4 wrong">Answer 3</button>
+                    <button class="btn btnq4 wrong">Answer 4</button>
+                </div> 
+            </div>
+            <div id = "q5" style = "display: none;">
+                <h3>Question 5</h3>
+                <div class="answer-grid">
+                    <button class="btn btnq5 correct">Answer 1</button>
+                    <button class="btn btnq5 wrong">Answer 2</button>
+                    <button class="btn btnq5 wrong">Answer 3</button>
+                    <button class="btn btnq5 wrong">Answer 4</button>
+                </div> 
+            </div>
+            <div id = "end-game" style = "display: none;">
+                <h3>Thanks for playing!</h3>
+                <h4 id="score-display">Score</h4>
+                <button class="btn" id="play-again">Play Again!</button>
+            </div> 
+        </div>
     </div>
-    <script src="js/main.js"></script>
+    <footer>
+        <img id="prem-logo" src="images/Premier_League_Logo.svg" />
+        <p>Brian Dowd | March 2021</p>
+        <p>#coys</p>
+    </footer>
+    <!--<script src="js/main.js"></script>-->
+    <script src="js/javascript.js"></script>
+    <!--<script src="js/data.js"></script>-->
+    <!--<script src="js/game.js"></script>-->
 </body>
 </html>
