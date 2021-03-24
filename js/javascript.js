@@ -62,6 +62,7 @@ q1.innerHTML = `<h3>${gameQuestions[0].question1}</h3>
     <button class="btn btnq1 correct">${gameQuestions[0].answers1.d}</button>
 </div>`;
 
+
 /*for (let i = 0; i < gameQuestions.length; i++) {
     gameQuestions[i];
     q2.innerHTML = `<h3>${gameQuestions[0].question2}</h3>`;
