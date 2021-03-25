@@ -140,15 +140,15 @@ q2.innerHTML = `<h3>${gameQuestions[1].question2}</h3>
 <div class="answer-grid">
     <button class="btn btnq2 wrong">${gameQuestions[1].answers2.a}</button>
     <button class="btn btnq2 wrong">${gameQuestions[1].answers2.b}</button>
-    <button class="btn btnq2 correct">${gameQuestions[1].answers2.c}</button>
-    <button class="btn btnq2 wrong">${gameQuestions[1].answers2.d}</button>
+    <button class="btn btnq2 wrong">${gameQuestions[1].answers2.c}</button>
+    <button class="btn btnq2 correct">${gameQuestions[1].answers2.d}</button>
 </div>`;
 
 q3.innerHTML = `<h3>${gameQuestions[2].question3}</h3>
 <div class="answer-grid">
     <button class="btn btnq3 wrong">${gameQuestions[2].answers3.a}</button>
-    <button class="btn btnq3 correct">${gameQuestions[2].answers3.b}</button>
-    <button class="btn btnq3 wrong">${gameQuestions[2].answers3.c}</button>
+    <button class="btn btnq3 wrong">${gameQuestions[2].answers3.b}</button>
+    <button class="btn btnq3 correct">${gameQuestions[2].answers3.c}</button>
     <button class="btn btnq3 wrong">${gameQuestions[2].answers3.d}</button>
 </div>`;
 
@@ -163,9 +163,9 @@ q4.innerHTML = `<h3>${gameQuestions[3].question4}</h3>
 q5.innerHTML = `<h3>${gameQuestions[4].question5}</h3>
 <div class="answer-grid">
     <button class="btn btnq5 wrong">${gameQuestions[4].answers5.a}</button>
-    <button class="btn btnq5 wrong">${gameQuestions[4].answers5.b}</button>
+    <button class="btn btnq5 correct">${gameQuestions[4].answers5.b}</button>
     <button class="btn btnq5 wrong">${gameQuestions[4].answers5.c}</button>
-    <button class="btn btnq5 correct">${gameQuestions[4].answers5.d}</button>
+    <button class="btn btnq5 wrong">${gameQuestions[4].answers5.d}</button>
 </div>`;
 
 //start game on click. starts timer function. destroys splash screen. displays question 1.
