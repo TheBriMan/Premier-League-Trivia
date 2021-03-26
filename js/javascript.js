@@ -1,7 +1,7 @@
 //Game Questions
 const gameQuestions = [
     {
-        question1: "We'll give you an easy one to start: What is the best premier league side of all time?",
+        question1: "We'll give you an easy one to start: What is the best premier league club of all time?",
         answers1: {
             a: "Tottenham Hotspur FC",
             b: "Tottenham Hotspur FC",
@@ -20,7 +20,7 @@ const gameQuestions = [
         correctAnswer: "d",
     },
     {
-        question3: "Which Premier League team finished the season with the fewest points ever?",
+        question3: "Which Premier League club finished the season with the fewest points ever?",
         answers3: {
             a: "Aston Villa (15/16)",
             b: "Huddersfield (18/19)",
@@ -90,7 +90,7 @@ const gameQuestions = [
         correctAnswer: "a",
     },
     {
-        question10: "In 2000/01 three teams named City were relegated. Which one avoided the drop?",
+        question10: "Jimmy Floyd-Hasselbaink was top scorer in 2000/01, but who did Chelsea sign him from?",
         answers10: {
             a: "Leeds United",
             b: "Boavista",
@@ -109,20 +109,30 @@ const q2 = document.getElementById('q2');
 const q3 = document.getElementById('q3');
 const q4 = document.getElementById('q4');
 const q5 = document.getElementById('q5');
+const q6 = document.getElementById('q6');
+const q7 = document.getElementById('q7');
+const q8 = document.getElementById('q8');
+const q9 = document.getElementById('q9');
+const q10 = document.getElementById('q10');
 const btnq1 = document.getElementsByClassName('btnq1');
 const btnq2 = document.getElementsByClassName('btnq2');
 const btnq3 = document.getElementsByClassName('btnq3');
 const btnq4 = document.getElementsByClassName('btnq4');
 const btnq5 = document.getElementsByClassName('btnq5');
+const btnq6 = document.getElementsByClassName('btnq6');
+const btnq7 = document.getElementsByClassName('btnq7');
+const btnq8 = document.getElementsByClassName('btnq8');
+const btnq9 = document.getElementsByClassName('btnq9');
+const btnq10 = document.getElementsByClassName('btnq10');
 const endGameScreen = document.getElementById('end-game');
 const restartGame = document.getElementById('play-again');
 const displayScore = document.getElementById('score-display');
 const timer = document.getElementById('timer');
 let correctAnswers = 0;
-let numberQuestions = 5;
+let numberQuestions = 10;
 const selectCorrectAnswer = document.getElementsByClassName('correct');
 const selectWrongAnswer = document.getElementsByClassName('wrong');
-const startingTime = 1.5;
+const startingTime = 3;
 const endingMinutes = 0;
 const endingMinutes2 = 1;
 let time = startingTime * 60;
@@ -166,6 +176,46 @@ q5.innerHTML = `<h3>${gameQuestions[4].question5}</h3>
     <button class="btn btnq5 correct">${gameQuestions[4].answers5.b}</button>
     <button class="btn btnq5 wrong">${gameQuestions[4].answers5.c}</button>
     <button class="btn btnq5 wrong">${gameQuestions[4].answers5.d}</button>
+</div>`;
+
+q6.innerHTML = `<h3>${gameQuestions[5].question6}</h3>
+<div class="answer-grid">
+    <button class="btn btnq6 wrong">${gameQuestions[5].answers6.a}</button>
+    <button class="btn btnq6 wrong">${gameQuestions[5].answers6.b}</button>
+    <button class="btn btnq6 wrong">${gameQuestions[5].answers6.c}</button>
+    <button class="btn btnq6 correct">${gameQuestions[5].answers6.d}</button>
+</div>`;
+
+q7.innerHTML = `<h3>${gameQuestions[6].question7}</h3>
+<div class="answer-grid">
+    <button class="btn btnq7 wrong">${gameQuestions[6].answers7.a}</button>
+    <button class="btn btnq7 wrong">${gameQuestions[6].answers7.b}</button>
+    <button class="btn btnq7 correct">${gameQuestions[6].answers7.c}</button>
+    <button class="btn btnq7 wrong">${gameQuestions[6].answers7.d}</button>
+</div>`;
+
+q8.innerHTML = `<h3>${gameQuestions[7].question8}</h3>
+<div class="answer-grid">
+    <button class="btn btnq8 wrong">${gameQuestions[7].answers8.a}</button>
+    <button class="btn btnq8 correct">${gameQuestions[7].answers8.b}</button>
+    <button class="btn btnq8 wrong">${gameQuestions[7].answers8.c}</button>
+    <button class="btn btnq8 wrong">${gameQuestions[7].answers8.d}</button>
+</div>`;
+
+q9.innerHTML = `<h3>${gameQuestions[8].question9}</h3>
+<div class="answer-grid">
+    <button class="btn btnq9 correct">${gameQuestions[8].answers9.a}</button>
+    <button class="btn btnq9 wrong">${gameQuestions[8].answers9.b}</button>
+    <button class="btn btnq9 wrong">${gameQuestions[8].answers9.c}</button>
+    <button class="btn btnq9 wrong">${gameQuestions[8].answers9.d}</button>
+</div>`;
+
+q10.innerHTML = `<h3>${gameQuestions[9].question10}</h3>
+<div class="answer-grid">
+    <button class="btn btnq10 wrong">${gameQuestions[9].answers10.a}</button>
+    <button class="btn btnq10 wrong">${gameQuestions[9].answers10.b}</button>
+    <button class="btn btnq10 correct">${gameQuestions[9].answers10.c}</button>
+    <button class="btn btnq10 wrong">${gameQuestions[9].answers10.d}</button>
 </div>`;
 
 //start game on click. starts timer function. destroys splash screen. displays question 1.
@@ -228,12 +278,52 @@ for (let i = 0; i < btnq4.length; i++) {
     })
 }
 
-//displays end game screen and results
+//displays q6
 for (let i = 0; i < btnq5.length; i++) {
     btnq5[i].addEventListener('click',function(){
         q5.style.display = "none";
+        q6.style.display = "block";
+    })
+}
+
+//displays q7
+for (let i = 0; i < btnq6.length; i++) {
+    btnq6[i].addEventListener('click',function(){
+        q6.style.display = "none";
+        q7.style.display = "block";
+    })
+}
+
+//displays q8
+for (let i = 0; i < btnq7.length; i++) {
+    btnq7[i].addEventListener('click',function(){
+        q7.style.display = "none";
+        q8.style.display = "block";
+    })
+}
+
+//displays q9
+for (let i = 0; i < btnq8.length; i++) {
+    btnq8[i].addEventListener('click',function(){
+        q8.style.display = "none";
+        q9.style.display = "block";
+    })
+}
+
+//displays q10
+for (let i = 0; i < btnq9.length; i++) {
+    btnq9[i].addEventListener('click',function(){
+        q9.style.display = "none";
+        q10.style.display = "block";
+    })
+}
+
+//displays end game screen and results
+for (let i = 0; i < btnq10.length; i++) {
+    btnq10[i].addEventListener('click',function(){
+        q10.style.display = "none";
         endGameScreen.style.display = "block";
-        //timer.style.display = "none";
+        timer.style.display = "none";
         if (time > 0) {
             time = endingMinutes2;
             console.log('button clicked');
